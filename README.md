@@ -1,0 +1,2 @@
+coreplayer-default-theme
+========================
