@@ -4,6 +4,8 @@
 @import 'buttons';
 @import 'button-groups';
 
+@imgPath: '../../../themes/@{theme}/img/';
+
 input[type=text],
 input[type=password],
 input[type=search],
@@ -70,7 +72,7 @@ a:hover {
 
 .action, a.action.black, input.action {
     display: inline-block;
-    background: url('../../../modules/coreplayer-shared-module/img/sprite.png') 0 -1000px no-repeat;
+    background: url('@{imgPath}sprite.png') 0 -1000px no-repeat;
     text-transform: none;
     padding: 0 0 0 16px;
 }
@@ -192,7 +194,7 @@ a:hover {
     margin-left: 1em;
     padding-right: 22px;
     padding-bottom: 2px;
-    background: url('../../../modules/coreplayer-shared-module/img/sprite.png');
+    background: url('@{imgPath}sprite.png');
     background-repeat: no-repeat;
     background-position: 0 -3000px;
     margin-top: 6px;
@@ -233,7 +235,7 @@ a:hover {
 
 #app .headerPanel .messageBox .close{
     float: right;
-    background-image: url('../../../modules/coreplayer-shared-module/img/close_message_box.png');
+    background-image: url('@{imgPath}close_message_box.png');
     background-repeat: no-repeat;
     width: 17px;
     height: 17px;
@@ -265,7 +267,7 @@ a:hover {
 
 #app .leftPanel .top .collapseButton{
     float: right;
-    background: url('../../../modules/coreplayer-shared-module/img/arrows_left.png') no-repeat;
+    background: url('@{imgPath}arrows_left.png') no-repeat;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -279,7 +281,7 @@ a:hover {
 }
 
 #app .leftPanel .closed .expandButton{
-    background: url('../../../modules/coreplayer-shared-module/img/arrows_right.png') no-repeat;
+    background: url('@{imgPath}arrows_right.png') no-repeat;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -331,7 +333,7 @@ a:hover {
 }
 
 #app .rightPanel .closed .expandButton{
-    background: url('../../../modules/coreplayer-shared-module/img/arrows_left.png') no-repeat;
+    background: url('@{imgPath}arrows_left.png') no-repeat;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -348,7 +350,7 @@ a:hover {
 
 #app .rightPanel .top .collapseButton{
     position: absolute;
-    background: url('../../../modules/coreplayer-shared-module/img/arrows_right.png') no-repeat;
+    background: url('@{imgPath}arrows_right.png') no-repeat;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -372,7 +374,7 @@ a:hover {
 }
 
 #app .footerPanel .options a.imageButton.embed{
-    background: url('../../../modules/coreplayer-shared-module/img/embed.png') no-repeat;
+    background: url('@{imgPath}embed.png') no-repeat;
     height: 21px;
     width: 75px;
 }
@@ -382,7 +384,7 @@ a:hover {
 }
 
 #app .footerPanel .options a.imageButton.fullScreen{
-    background: url('../../../modules/coreplayer-shared-module/img/fullscreen.png') no-repeat;
+    background: url('@{imgPath}fullscreen.png') no-repeat;
     height: 21px;
     width: 140px;
     float: right;
@@ -395,7 +397,7 @@ a:hover {
 }
 
 #app .footerPanel .options a.imageButton.normal{
-    background: url('../../../modules/coreplayer-shared-module/img/normal.png') no-repeat;
+    background: url('@{imgPath}normal.png') no-repeat;
     height: 21px;
     width: 140px;
     float: right;
@@ -404,7 +406,7 @@ a:hover {
 }
 
 #app.lightbox .footerPanel .options a.imageButton.normal{
-    background: url('../../../modules/coreplayer-shared-module/img/close_lightbox.png') no-repeat;
+    background: url('@{imgPath}close_lightbox.png') no-repeat;
 }
 
 #app .footerPanel .options.minimiseButtons a.imageButton.normal{
@@ -420,7 +422,7 @@ a:hover {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-    background-image: url('../../../modules/coreplayer-shared-module/img/modal_bg.gif');
+    background-image: url('@{imgPath}modal_bg.gif');
     display: none;
 }
 
@@ -436,7 +438,7 @@ a:hover {
 #app .overlay .top .close{
     height: 24px;
     width: 85px;
-    background: url('../../../modules/coreplayer-shared-module/img/close.png') no-repeat;
+    background: url('@{imgPath}close.png') no-repeat;
     cursor: pointer;
     float: right;
 }
@@ -521,7 +523,7 @@ a:hover {
 
 #app .overlay .bottom{
     height: 11px;
-    background: url('../../../modules/coreplayer-shared-module/img/dialogue_arrow.png') no-repeat;
+    background: url('@{imgPath}dialogue_arrow.png') no-repeat;
 }
 
 #app .overlay.genericDialogue{
@@ -548,3 +550,23 @@ a:hover {
 }
 
 /*#endregion */
+
+
+// test overriding module images
+/*
+#app .centerPanel{
+
+    @imgPath: '../../../themes/@{theme}/img/';
+
+    .paging.btn {
+
+        &.prev {
+            background-image: url('@{imgPath}prev_page_test_theme.png');
+        }
+
+        &.next{
+            background-image: url('@{imgPath}next_page_test_theme.png');
+        }
+    }
+}
+*/
