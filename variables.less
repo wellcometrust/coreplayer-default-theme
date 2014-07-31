@@ -15,6 +15,8 @@
 // -------------------------
 
 @brand-primary:                 #005870;
+@brand-primary-light:           lighten(@brand-primary, 10%);
+@brand-primary-lighter:         lighten(@brand-primary, 20%);
 @brand-secondary:               #FFB81D;
 @brand-warning:                 #FFB81D;
 @brand-success:                 #5cb85c;
@@ -69,6 +71,10 @@
 @btn-primary-color:             #fff;
 @btn-primary-bg:                @brand-primary;
 @btn-primary-border:            darken(@btn-primary-bg, 5%);
+
+@btn-secondary-bg:              @gray-light;
+@btn-secondary-border:	        @gray;
+@btn-secondary-color:	        #000;
 
 @btn-success-color:             #fff;
 @btn-success-bg:                @brand-success;
@@ -132,6 +138,7 @@
 
 @overlay-modal-bg:              rgba(0, 0, 0, 0.5);
 @overlay-bg:                    #fff;
+@overlay-group-bg:              #F5F5F5;
 
 // Misc
 // -------------------------
@@ -140,5 +147,5 @@
 @loader-white-bg:               'data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkEAAoAAwAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkEAAoABAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQACgAFACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQACgAGACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAAKAAcALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==';
 
 @scrollbar-width:               12px;
-@scrollbar-thumb-color:         lighten(@brand-primary, 10%); // originally #408294;
+@scrollbar-thumb-color:         lighten(@brand-primary, 10%);
 
