@@ -1,0 +1,47 @@
+
+#app {
+
+    .imageBtn{
+        display: block;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .btn {
+        display: inline-block;
+        font-size: 1em;
+        margin: 0 0.5em 0 0;
+        padding: 0.25em 1em;
+        border: none;
+        background-color: @btn-default-bg;
+        color: @btn-default-color;
+        cursor: pointer;
+        text-transform: uppercase;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+
+        &:hover {
+            background-color: lighten(@btn-default-bg, 10%); // originally #428494;
+            text-decoration: none;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+
+        &.disabled {
+            background-color: @btn-disabled-bg;
+            color: @btn-disabled-hover-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: @btn-disabled-hover-bg;
+                color: @btn-disabled-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+

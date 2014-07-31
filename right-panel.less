@@ -1,0 +1,51 @@
+#app{
+
+    .rightPanel{
+
+        .top{
+            height: 35px;
+            position: relative;
+
+            .title{
+                position: absolute;
+                height: 20px;
+                margin-top: 6px;
+                cursor: pointer;
+                left: 35px;
+            }
+
+            .collapseButton{
+                position: absolute;
+                background: url('@{img-path}arrows_right.png') no-repeat;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin-top: 7px;
+                display: block;
+                left: 5px;
+            }
+        }
+
+        .closed{
+            width: 25px;
+
+            .title{
+                width: 20px;
+                display: block;
+                margin: 5px 0 0 5px;
+                cursor: pointer;
+            }
+
+            .expandButton{
+                background: url('@{img-path}arrows_left.png') no-repeat;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin: 7px 0 0 5px;
+                display: block;
+            }
+        }
+
+    }
+
+}

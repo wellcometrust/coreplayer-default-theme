@@ -1,0 +1,64 @@
+#app {
+
+    .footerPanel{
+        .options {
+            height: 41px;
+            a.imageBtn{
+                float: left;
+                margin-top: 10px;
+                margin-right: 15px;
+                &.embed{
+                    background: url('@{img-path}embed.png') no-repeat;
+                    height: 21px;
+                    width: 75px;
+                }
+                &.fullScreen{
+                    background: url('@{img-path}fullscreen.png') no-repeat;
+                    height: 21px;
+                    width: 140px;
+                    float: right;
+                    background-position: right;
+                    margin-right: 0;
+                }
+                &.normal{
+                    background: url('@{img-path}normal.png') no-repeat;
+                    height: 21px;
+                    width: 140px;
+                    float: right;
+                    background-position: right;
+                    margin-right: 0;
+                }
+            }
+
+            &.minimiseButtons{
+                a.imageBtn{
+                    &.embed{
+                        width: 27px;
+                    }
+                    &.fullScreen{
+                        width: 21px;
+                    }
+                    &.normal{
+                        width: 21px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+#app.lightbox{
+
+    .footerPanel{
+        .options{
+            a.imageBtn{
+                &.normal{
+                    background: url('@{img-path}close_lightbox.png') no-repeat;
+                }
+            }
+        }
+    }
+
+}

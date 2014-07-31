@@ -1,0 +1,53 @@
+#app{
+
+    .leftPanel {
+        a{
+            color: @text-color;
+            text-decoration: none;
+        }
+
+        .top{
+            height: 35px;
+            position: relative;
+
+            .title{
+                height: 20px;
+                margin: 6px 0 0 10px;
+                float: left;
+                cursor: pointer;
+            }
+
+            .collapseButton{
+                float: right;
+                background: url('@{img-path}arrows_left.png') no-repeat;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin: 7px 5px 0 0;
+                display: block;
+            }
+        }
+
+        .closed{
+            width: 25px;
+            float: right;
+
+            .title{
+                width: 20px;
+                display: block;
+                margin: 5px 0 0 0;
+                cursor: pointer;
+            }
+
+            .expandButton{
+                background: url('@{img-path}arrows_right.png') no-repeat;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                margin: 7px 5px 0 0;
+                display: block;
+            }
+        }
+    }
+
+}
