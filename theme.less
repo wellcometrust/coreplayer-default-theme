@@ -1,6 +1,7 @@
 
 @import 'variables';
 @import 'mixins';
+@import 'scaffolding';
 @import 'buttons';
 @import 'button-groups';
 @import 'header-panel';
@@ -12,80 +13,31 @@
 
 @img-path: '../../../themes/@{theme}/img/';
 
-input[type=text],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=email],
-input[type=number],
-textarea {
-    font-size: 1.3333em;
-    padding: 0.5em 0.25em;
-    width: 20em;
-    width: 100%;
-    border: 1px solid @gray;
-    -webkit-font-smoothing: antialiased;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-}
+//
+// Buttons
+// --------------------------------------------------
 
-::-webkit-scrollbar {
-    width: @scrollbar-width;
-}
-
-::-webkit-scrollbar-track {
-    background: @gray;
-}
-
-::-webkit-scrollbar-thumb {
-    background: @scrollbar-thumb-color;
-}
-
-//html {
-//    box-sizing: border-box;
-//}
-//*, *:before, *:after {
-//    box-sizing: inherit;
-//}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-body {
-    position: relative;
-    font-family: @font-family-sans-serif;
-    font-size: @font-size-base;
-}
-
-a:link, a:visited, .a {
-    color: @link-color;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    color: @link-hover-color;
-    text-decoration: underline;
-}
-
-.action, a.action.black, input.action {
-    display: inline-block;
-    background: url('@{img-path}sprite.png') 0 -1000px no-repeat;
-    text-transform: none;
-    padding: 0 0 0 16px;
+// Common styles
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    .border-radius(0);
 }
 
 #app {
     background-color: @body-bg;
     position: relative;
+
+    .action, a.action.black, input.action {
+        display: inline-block;
+        background: url('@{img-path}sprite.png') 0 -1000px no-repeat;
+        text-transform: none;
+        padding: 0 0 0 16px;
+        font-weight: bold;
+    }
 
     .headerPanel{
         position: relative;
@@ -118,7 +70,7 @@ a:hover {
     }
 
     .footerPanel{
-        position: absolute;
+        position: relative;
         margin-top: 0;
         margin-right: @panel-margin;
         margin-bottom: 0px;

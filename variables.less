@@ -28,6 +28,7 @@
 
 @body-bg:                       #000;
 @text-color:                    #fff;
+@text-secondary-color:          #000;
 @headings-color:                #000;
 @disabled:                      @gray-light;
 
@@ -62,8 +63,8 @@
 // Iconography
 // -------------------------
 
-//@icon-font-path:          "../fonts/";
-//@icon-font-name:          "glyphicons-halflings-regular";
+//@icon-font-path:              "../fonts/";
+//@icon-font-name:              "glyphicons-halflings-regular";
 
 // Components
 // -------------------------
@@ -88,33 +89,29 @@
 
 @btn-font-weight:               normal;
 
-@btn-default-color:             #fff;
-@btn-default-bg:                @brand-primary;
-@btn-default-border:            darken(@btn-primary-bg, 5%);
+@btn-default-color:             #000;
+@btn-default-bg:                @gray-lighter;
+@btn-default-border:            @gray;
 
 @btn-primary-color:             #fff;
 @btn-primary-bg:                @brand-primary;
-@btn-primary-border:            darken(@btn-primary-bg, 5%);
-
-@btn-secondary-bg:              @gray-lighter;
-@btn-secondary-border:	        @gray;
-@btn-secondary-color:	        #000;
+@btn-primary-border:            @brand-primary;
 
 @btn-success-color:             #fff;
 @btn-success-bg:                @brand-success;
-@btn-success-border:            darken(@btn-success-bg, 5%);
+@btn-success-border:            @brand-success;
 
 @btn-warning-color:             #fff;
 @btn-warning-bg:                @brand-warning;
-@btn-warning-border:            darken(@btn-warning-bg, 5%);
+@btn-warning-border:            @brand-warning;
 
 @btn-danger-color:              #fff;
 @btn-danger-bg:                 @brand-danger;
-@btn-danger-border:             darken(@btn-danger-bg, 5%);
+@btn-danger-border:             @brand-danger;
 
 @btn-info-color:                #fff;
 @btn-info-bg:                   @brand-info;
-@btn-info-border:               darken(@btn-info-bg, 5%);
+@btn-info-border:               @brand-info;
 
 @btn-disabled-color:            @gray-dark;
 @btn-disabled-hover-color:      @gray-darker;
@@ -131,6 +128,16 @@
 @panel-border-color:            #525252;
 @panel-border:                  1px solid @panel-border-color;
 @panel-margin:                  8px;
+
+// Thumbnails
+// -------------------------
+@thumbnail-padding:             @padding-small;
+@thumbnail-bg:                  @body-bg;
+@thumbnail-border:              @gray;
+@thumbnail-border-radius:       @border-radius-base;
+
+@thumbnail-caption-color:       @text-color;
+@thumbnail-caption-padding:     @padding-medium;
 
 // Margins
 // -------------------------
@@ -166,12 +173,20 @@
 @overlay-bg:                    #fff;
 @overlay-group-bg:              #F5F5F5;
 
-// Misc
+// Miscellaneous
 // -------------------------
 
+// Hr border color
+@hr-border:                     @gray-lighter;
+
+// Horizontal forms & lists
+@component-offset-horizontal:   180px;
+
+// loaders
 @loader-black-bg:               'data:image/gif;base64,R0lGODlhEAAQAPIAAAAAAP///zw8PLy8vP///5ycnHx8fGxsbCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==';
 @loader-white-bg:               'data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQACgABACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkEAAoAAgAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkEAAoAAwAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkEAAoABAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQACgAFACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQACgAGACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAAKAAcALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==';
 
+// scrollbars
 @scrollbar-width:               12px;
 @scrollbar-thumb-color:         lighten(@brand-primary, 10%);
 
