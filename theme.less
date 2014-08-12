@@ -13,23 +13,23 @@
 
 @img-path: '../../../themes/@{theme}/img/';
 
-//
-// Buttons
-// --------------------------------------------------
-
-// Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-    .border-radius(0);
-}
-
 #app {
     background-color: @body-bg;
     position: relative;
+
+    // Common styles
+    .btn-default,
+    .btn-primary,
+    .btn-success,
+    .btn-info,
+    .btn-warning,
+    .btn-danger {
+        .border-radius(0);
+    }
+
+    .imageBtn{
+        cursor: pointer;
+    }
 
     .action, a.action.black, input.action {
         display: inline-block;
